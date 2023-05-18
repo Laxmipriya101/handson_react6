@@ -2,37 +2,65 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: rgb(208, 124, 165);
+  background: linear-gradient(
+    0deg,
+    rgba(208, 124, 165, 1) 15%,
+    rgba(200, 235, 236, 1) 100%
+  );
+  background-repeat: no-repeat;
+  width: 100wh;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  height: 50px;
+  background-color: blue;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.add {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.home {
   color: white;
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.text {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  width: 280px;
+  height: 30px;
+  text-align: center;
+}
+
+.student {
+  width: 150px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+}
+
+.update {
+  width: 150px;
+  height: 40px;
+  background-color: blue;
+  color: white;
+  font-size: 18px;
 }

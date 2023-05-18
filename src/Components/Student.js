@@ -1,0 +1,54 @@
+import React, { useContext } from "react";
+import store from "./StoreComponent";
+import { Link, useNavigate } from "react-router-dom";
+
+function Student() {
+  const ContextData = useContext(store);
+  const Navi = useNavigate();
+  return (
+    <>
+      <div className="btn">
+        <h1>Students Details</h1>
+        <button
+          className="add"
+          onClick={() => {
+            Navi("/NewStudent");
+          }}
+        >
+          Add New Student
+        </button>
+      </div>
+
+      <table border="1" align="center" width="70%">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Couse</th>
+            <th>Batch</th>
+            <th>Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ContextData.entries.map((item, index) => {
+            return (
+              <tr key={index}>
+                <td>{item.name}</td>
+                <td>{item.Age}</td>
+                <td>{item.Course}</td>
+                <td>{item.Batch}</td>
+                <td>
+                  <Link to="/EditStudent" state={{ data: index }}>
+                    Edit
+                  </Link>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </>
+  );
+}
+
+export default Student;
